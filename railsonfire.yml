@@ -1,0 +1,16 @@
+id: 4573ef00-2960-0130-3faa-22000a1e8010
+setup:
+  commands:
+  - bundle install
+  - bundle exec rake db:schema:load
+test:
+  commands:
+  - bundle exec rake
+deploy:
+  heroku:
+    staging:
+      name: sheltered-brook-6527
+    production:
+      name: ''
+ruby_versions:
+- 1.9.3
